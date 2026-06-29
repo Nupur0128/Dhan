@@ -58,7 +58,7 @@ export default function Login() {
   function handlePinChange(i, val) {
     if (!/^\d*$/.test(val)) return
     const next = [...pin]; next[i] = val.slice(-1); setPin(next)
-    if (val && i < 3) pinRefs.current[i + 1]?.focus()
+    if (val && i < 5) pinRefs.current[i + 1]?.focus()
   }
 
   function handlePinKey(i, e) {
@@ -233,7 +233,7 @@ export default function Login() {
               <div className="flex flex-col items-center mb-8">
                 <div className="w-20 h-20 rounded-2xl bg-teal-50 flex items-center justify-center text-5xl mb-2">🔐</div>
                 <h2 className="text-2xl font-bold text-gray-900 mt-2">Enter Account PIN</h2>
-                <p className="text-sm text-gray-400 mt-1">Enter your 4-digit account PIN</p>
+                <p className="text-sm text-gray-400 mt-1">Enter your 6-digit account PIN</p>
               </div>
 
               <div className="flex gap-4 justify-center mb-6">
@@ -261,7 +261,7 @@ export default function Login() {
                 Login
               </button>
 
-              <button onClick={() => { setStep(2); setPin(['', '', '', '']); setError('') }} className="w-full text-center text-xs text-teal-600 hover:underline mt-4">
+              <button onClick={() => { setStep(2); setPin(['', '', '', '', '', '']); setError('') }} className="w-full text-center text-xs text-teal-600 hover:underline mt-4">
                 ← Back to OTP
               </button>
             </>
