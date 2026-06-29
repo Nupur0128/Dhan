@@ -100,8 +100,8 @@ export default function Portfolio() {
             <h2 className="text-base font-semibold text-gray-800 mb-4">Portfolio Value</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-1">
               {[
-                { label: 'Investment', value: '₹ 0.00' },
-                { label: 'Current Value', value: '₹ 0.00' },
+                { label: 'Investment', value: '₹ 62,53,560' },
+                { label: 'Current Value', value: '₹ 6,03,77,855' },
                 { label: 'Overall Profits', value: '₹ 0.00 (0.00%)' },
                 { label: "Today's Profit", value: '₹ 0.00 (0.00%)' },
               ].map(item => (

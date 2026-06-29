@@ -82,11 +82,11 @@ export default function Money() {
             <div className="grid grid-cols-3 gap-4 mb-5">
               <div>
                 <p className="text-xs text-gray-500 mb-1">Margin Available</p>
-                <p className="text-2xl font-bold text-red-500">₹ 2460132</p>
+                <p className="text-2xl font-bold text-green-600">₹ 24,60,132</p>
               </div>
               <div>
                 <p className="text-xs text-gray-500 mb-1">Margin Used</p>
-                <p className="text-2xl font-bold text-gray-800">₹ 2460132</p>
+                <p className="text-2xl font-bold text-gray-800">₹ 24,60,132</p>
               </div>
               <div>
                 <p className="text-xs text-gray-500 mb-1">For Withdrawal</p>
