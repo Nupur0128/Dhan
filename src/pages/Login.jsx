@@ -14,7 +14,7 @@ const features = [
 
 function Logo({ size = 10 }) {
   const px = size * 4
-  return <img src="/logo2.png" alt="Dhan" style={{ width: px, height: px }} className="rounded-2xl flex-shrink-0 object-contain" />
+  return <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-sm select-none">ध</div>
 }
 
 export default function Login() {
@@ -117,11 +117,11 @@ export default function Login() {
         {/* circuit lines decoration for step 2+ */}
         {step >= 2 && (
           <svg className="absolute top-0 right-0 w-72 h-72 opacity-30" viewBox="0 0 300 300" fill="none">
-            <circle cx="180" cy="60" r="5" stroke="#14b8a6" strokeWidth="1.5"/>
-            <circle cx="250" cy="100" r="5" stroke="#14b8a6" strokeWidth="1.5"/>
-            <circle cx="200" cy="150" r="5" stroke="#14b8a6" strokeWidth="1.5"/>
-            <path d="M180 60 H250 V100" stroke="#14b8a6" strokeWidth="1.5"/>
-            <path d="M250 100 H200 V150" stroke="#14b8a6" strokeWidth="1.5"/>
+            <circle cx="180" cy="60" r="5" stroke="#14b8a6" strokeWidth="1.5" />
+            <circle cx="250" cy="100" r="5" stroke="#14b8a6" strokeWidth="1.5" />
+            <circle cx="200" cy="150" r="5" stroke="#14b8a6" strokeWidth="1.5" />
+            <path d="M180 60 H250 V100" stroke="#14b8a6" strokeWidth="1.5" />
+            <path d="M250 100 H200 V150" stroke="#14b8a6" strokeWidth="1.5" />
           </svg>
         )}
       </div>
@@ -144,7 +144,7 @@ export default function Login() {
                   type="tel"
                   maxLength={10}
                   value={mobile}
-                  onChange={e => { setMobile(e.target.value.replace(/\D/,'')); setError('') }}
+                  onChange={e => { setMobile(e.target.value.replace(/\D/, '')); setError('') }}
                   placeholder="Enter Your Mobile Number Here"
                   className="flex-1 px-4 py-3 text-sm outline-none text-gray-700 placeholder-gray-300"
                 />
@@ -190,7 +190,7 @@ export default function Login() {
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-gray-400 text-lg">⌨</span>
                 <p className="text-sm text-gray-600">Enter OTP sent to <strong>{mobile}</strong></p>
-                <button onClick={() => { setStep(1); setOtp(['','','','','','']); setError('') }} className="text-gray-400 hover:text-teal-600">✎</button>
+                <button onClick={() => { setStep(1); setOtp(['', '', '', '', '', '']); setError('') }} className="text-gray-400 hover:text-teal-600">✎</button>
               </div>
 
               <div className="flex gap-3 mb-6">
@@ -261,7 +261,7 @@ export default function Login() {
                 Login
               </button>
 
-              <button onClick={() => { setStep(2); setPin(['','','','']); setError('') }} className="w-full text-center text-xs text-teal-600 hover:underline mt-4">
+              <button onClick={() => { setStep(2); setPin(['', '', '', '']); setError('') }} className="w-full text-center text-xs text-teal-600 hover:underline mt-4">
                 ← Back to OTP
               </button>
             </>
