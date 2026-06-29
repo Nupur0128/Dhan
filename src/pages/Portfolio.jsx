@@ -100,10 +100,10 @@ export default function Portfolio() {
             <h2 className="text-base font-semibold text-gray-800 mb-4">Portfolio Value</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-1">
               {[
-                { label: 'Investment', value: '₹ 62,53,560', green: false },
-                { label: 'Current Value', value: '₹ 6,03,77,855', green: false },
-                { label: 'Overall Profits', value: '₹ 5,41,24,295', green: false },
-                { label: "Today's Profit", value: '₹ 33,278', green: true },
+                { label: 'Investment', value: '₹ 62,53,560.00', green: false },
+                { label: 'Current Value', value: '₹ 6,03,77,855.00', green: false },
+                { label: 'Overall Profits', value: '₹ 5,41,24,295.00', green: false },
+                { label: "Today's Profit", value: '₹ 33,278.00', green: true },
               ].map(item => (
                 <div key={item.label}>
                   <p className="text-xs text-gray-500 mb-1">{item.label}</p>
