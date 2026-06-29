@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const VALID_MOBILE = '1234567890'
+const VALID_MOBILE = '7483946281'
 const VALID_OTP = '123456'
-const VALID_PIN = '1234'
+const VALID_PIN = '808503'
 
 const features = [
   { label: 'Powered by DEXT', desc: 'High-speed order execution with our own proprietary engine.' },
@@ -21,7 +21,7 @@ export default function Login() {
   const [step, setStep] = useState(1)
   const [mobile, setMobile] = useState('')
   const [otp, setOtp] = useState(['', '', '', '', '', ''])
-  const [pin, setPin] = useState(['', '', '', ''])
+  const [pin, setPin] = useState(['', '', '', '', '', ''])
   const [error, setError] = useState('')
   const [timer, setTimer] = useState(27)
   const otpRefs = useRef([])
