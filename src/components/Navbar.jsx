@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { FaUser } from "react-icons/fa";
+import { FaUser } from 'react-icons/fa'
 
 const navLinks = [
-  { label: 'Home', to: '/' },
+  { label: 'Home', to: '/home' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'Positions', to: '/positions' },
   { label: 'Orders', to: '/orders' },
@@ -25,6 +25,17 @@ export default function Navbar() {
   const [tickerOpen, setTickerOpen] = useState(true)
   const [profileOpen, setProfileOpen] = useState(false)
   const navigate = useNavigate()
+  const profileRef = useRef(null)
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (profileRef.current && !profileRef.current.contains(e.target)) {
+        setProfileOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -69,10 +80,9 @@ export default function Navbar() {
           <button className="text-gray-500 hover:text-gray-700">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
           </button>
-          <div className="relative">
+          <div className="relative" ref={profileRef}>
             <button onClick={() => setProfileOpen(o => !o)} className="text-gray-500 hover:text-green-600 transition-colors">
-              {/* <FaUser className="w-4 h-4" /> */}
-              <img src="/k-logo.png" alt="Profile" className="w-8 h-8 rounded-full object-cover" />
+              <FaUser className="w-4 h-4" />
             </button>
             {profileOpen && (
               <div className="absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-xl shadow-lg z-50 overflow-hidden">

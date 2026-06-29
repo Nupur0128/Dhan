@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 // import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -18,7 +18,8 @@ function App() {
             <Navbar />
             <div className="flex-1">
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Navigate to="/login" replace />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/money" element={<Money />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/positions" element={<Positions />} />

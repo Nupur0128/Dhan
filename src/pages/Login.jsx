@@ -66,7 +66,7 @@ export default function Login() {
   }
 
   function handleLogin() {
-    if (pin.join('') === VALID_PIN) { setError(''); navigate('/') }
+    if (pin.join('') === VALID_PIN) { setError(''); navigate('/home') }
     else setError('Invalid PIN. Use: ' + VALID_PIN)
   }
 
