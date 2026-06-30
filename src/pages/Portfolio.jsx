@@ -27,14 +27,7 @@ const top25Companies = [
   { sno: 15, name: 'Adani Ports',         amount: '₹⁠52,12,270.25'  },
   { sno: 16, name: 'Infosys',             amount: '₹⁠27,20,000.15'  },
   { sno: 17, name: 'Kotak Mah. Bank',     amount: '₹5,13,641.98'  },
-  { sno: 18, name: 'Adani Enterp.',       amount: '₹65,300'  },
-  { sno: 19, name: 'Titan Company',       amount: '₹62,100'  },
-  { sno: 20, name: 'M & M',               amount: '₹58,900'  },
-  { sno: 21, name: 'ITC',                 amount: '₹55,700'  },
-  { sno: 22, name: 'NTPC',                amount: '₹52,400'  },
-  { sno: 23, name: 'UltraTech Cem.',      amount: '₹49,200'  },
-  { sno: 24, name: 'Bharat Electron',     amount: '₹46,800'  },
-  { sno: 25, name: 'JSW Steel',           amount: '₹43,500'  },
+  { sno: 19, name: 'Titan Company',       amount: '₹33,278.00'  },
 ]
 
 const portfolioTabs = ['Stocks', 'Mutual Fund', 'ETFs']
