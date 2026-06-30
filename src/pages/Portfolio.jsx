@@ -19,14 +19,14 @@ const top25Companies = [
   { sno: 7,  name: 'Bajaj Finance',       amount: '₹12,12,355.70' },
   { sno: 8,  name: 'Larsen & Toubro',     amount: '₹45,70,000.15' },
   { sno: 9,  name: 'Life Insurance',      amount: '₹8,07,000.50' },
-  { sno: 10, name: 'Hind. Unilever',      amount: '₹98,500'  },
-  { sno: 11, name: 'Sun Pharma.Inds.',    amount: '₹92,300'  },
-  { sno: 12, name: 'Maruti Suzuki',       amount: '₹88,700'  },
-  { sno: 13, name: 'Adani Power',         amount: '₹82,400'  },
-  { sno: 14, name: 'Axis Bank',           amount: '₹78,900'  },
-  { sno: 15, name: 'Adani Ports',         amount: '₹74,600'  },
-  { sno: 16, name: 'Infosys',             amount: '₹71,200'  },
-  { sno: 17, name: 'Kotak Mah. Bank',     amount: '₹68,500'  },
+  { sno: 10, name: 'Hind. Unilever',      amount: '₹53,00,670.50'  },
+  { sno: 11, name: 'Sun Pharma.Inds.',    amount: '₹33,00,000.25'  },
+  { sno: 12, name: 'Maruti Suzuki',       amount: '₹51,00,450.25'  },
+  { sno: 13, name: 'Adani Power',         amount: '₹55,57,770.25'  },
+  { sno: 14, name: 'Axis Bank',           amount: '₹52,30,790.25'  },
+  { sno: 15, name: 'Adani Ports',         amount: '₹⁠52,12,270.25'  },
+  { sno: 16, name: 'Infosys',             amount: '₹⁠27,20,000.15'  },
+  { sno: 17, name: 'Kotak Mah. Bank',     amount: '₹5,13,641.98'  },
   { sno: 18, name: 'Adani Enterp.',       amount: '₹65,300'  },
   { sno: 19, name: 'Titan Company',       amount: '₹62,100'  },
   { sno: 20, name: 'M & M',               amount: '₹58,900'  },
@@ -150,7 +150,7 @@ export default function Portfolio() {
                   onClick={() => setActiveFilter(tab)}
                   className={`px-3 py-1.5 rounded-full text-xs border transition-colors ${activeFilter === tab ? 'border-green-600 text-green-700 bg-green-50 font-medium' : 'border-gray-300 text-gray-600 hover:border-green-500'}`}
                 >
-                  {tab} {tab === 'Overall' && <span className="ml-1 bg-green-600 text-white text-[10px] rounded-full px-1.5">0</span>}
+                  {tab} {tab === 'Overall' && <span className="ml-1 bg-green-600 text-white text-[10px] rounded-full px-1.5">25</span>}
                 </button>
               ))}
               <button className="text-gray-400 hover:text-gray-600 text-sm">‹</button>
