@@ -14,7 +14,7 @@ const features = [
 
 function Logo({ size = 10 }) {
   const px = size * 4
-  return <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-sm select-none">ध</div>
+  return <img src="/dhan.png" alt="logo" className={`w-${px} h-${px}`} />
 }
 
 export default function Login() {

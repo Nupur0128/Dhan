@@ -43,7 +43,8 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-4 h-14 border-b border-gray-100">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-sm select-none">ध</div>
+          <img src="/dhan.png" alt="logo" className='rounded-full w-8 h-8'/>
+          {/* <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-sm select-none">ध</div> */}
           <span className="font-semibold text-sm text-gray-800 hidden sm:block">Fin Nifty</span>
           <span className="text-sm font-bold text-gray-900">26,620.85</span>
           <span className="text-red-500 text-xs font-medium">-149.70 (-0.56%) ↘</span>

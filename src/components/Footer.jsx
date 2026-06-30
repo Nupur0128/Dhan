@@ -26,7 +26,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xs">ध</div>
+            <img src="/dhan.png" alt="logo" className='rounded-full w-8 h-8'/>
             <span className="text-sm font-semibold text-gray-700">Dahn</span>
           </div>
           <p className="text-xs text-gray-400 text-center">
