@@ -9,6 +9,34 @@ const fnoStocks = [
   { name: 'Adani Power', exchange: 'NSE', price: '225.70', change: '-3.57 (-1.56%)', up: false },
 ]
 
+const top25Companies = [
+  { sno: 1,  name: 'Reliance Industries', amount: '₹2,45,000' },
+  { sno: 2,  name: 'HDFC Bank',           amount: '₹1,98,500' },
+  { sno: 3,  name: 'Bharti Airtel',       amount: '₹1,75,300' },
+  { sno: 4,  name: 'ICICI Bank',          amount: '₹1,62,800' },
+  { sno: 5,  name: 'SBI',                 amount: '₹1,45,600' },
+  { sno: 6,  name: 'TCS',                 amount: '₹1,38,900' },
+  { sno: 7,  name: 'Bajaj Finance',       amount: '₹1,22,400' },
+  { sno: 8,  name: 'Larsen & Toubro',     amount: '₹1,15,700' },
+  { sno: 9,  name: 'Life Insurance',      amount: '₹1,08,200' },
+  { sno: 10, name: 'Hind. Unilever',      amount: '₹98,500'  },
+  { sno: 11, name: 'Sun Pharma.Inds.',    amount: '₹92,300'  },
+  { sno: 12, name: 'Maruti Suzuki',       amount: '₹88,700'  },
+  { sno: 13, name: 'Adani Power',         amount: '₹82,400'  },
+  { sno: 14, name: 'Axis Bank',           amount: '₹78,900'  },
+  { sno: 15, name: 'Adani Ports',         amount: '₹74,600'  },
+  { sno: 16, name: 'Infosys',             amount: '₹71,200'  },
+  { sno: 17, name: 'Kotak Mah. Bank',     amount: '₹68,500'  },
+  { sno: 18, name: 'Adani Enterp.',       amount: '₹65,300'  },
+  { sno: 19, name: 'Titan Company',       amount: '₹62,100'  },
+  { sno: 20, name: 'M & M',               amount: '₹58,900'  },
+  { sno: 21, name: 'ITC',                 amount: '₹55,700'  },
+  { sno: 22, name: 'NTPC',                amount: '₹52,400'  },
+  { sno: 23, name: 'UltraTech Cem.',      amount: '₹49,200'  },
+  { sno: 24, name: 'Bharat Electron',     amount: '₹46,800'  },
+  { sno: 25, name: 'JSW Steel',           amount: '₹43,500'  },
+]
+
 const portfolioTabs = ['Stocks', 'Mutual Fund', 'ETFs']
 const filterTabs = ['Overall', 'Multi-Baggers', 'Special', 'Pay Later', 'Insights', 'XIRR', 'CA', 'Unlisted', 'SIPs']
 
@@ -129,16 +157,34 @@ export default function Portfolio() {
               <button className="text-gray-400 hover:text-gray-600 text-sm">›</button>
             </div>
 
-            {/* Empty state */}
-            <div className="flex items-center gap-5 py-4">
-              <span className="text-5xl">🚀</span>
-              <div>
-                <p className="text-base font-bold text-gray-800 mb-1">Start your Investment Journey today!</p>
-                <p className="text-sm text-gray-500 mb-4">You are ready to invest on Dhan</p>
-                <button className="border border-orange-400 text-orange-500 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-50 transition-colors">
-                  Invest Now ▶
-                </button>
-              </div>
+            {/* Company List */}
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-indigo-50">
+                    <th className="text-left px-4 py-2 text-indigo-500 font-semibold text-xs w-16">S.No.</th>
+                    <th className="text-left px-4 py-2 text-indigo-500 font-semibold text-xs">Name</th>
+                    <th className="text-right px-4 py-2 text-indigo-500 font-semibold text-xs">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {top25Companies.map((company, idx) => (
+                    <tr
+                      key={company.sno}
+                      className={`border-b border-gray-100 hover:bg-gray-50 cursor-pointer transition-colors ${
+                        idx % 2 === 0 ? 'bg-white' : 'bg-indigo-50/30'
+                      }`}
+                    >
+                      <td className="px-4 py-2.5 text-gray-500 text-xs">{company.sno}.</td>
+                      <td className="px-4 py-2.5">
+                        <p className="text-black font-medium">{company.name}</p>
+                        <p className="text-[10px] text-gray-400">NSE</p>
+                      </td>
+                      <td className="px-4 py-2.5 text-right text-green-600 font-semibold">{company.amount}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
 
